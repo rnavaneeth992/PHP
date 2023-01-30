@@ -1,0 +1,9 @@
+.fott
+    {
+        text-align: center;
+        color:crimson;
+        background-color:lightskyblue;
+        height: 40px;
+        width:100%;
+        float: right;
+    }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st question</title>
+</head>
+<body>
+    <p align="right">
+        My details<br> 
+        R Navaneetha Krishnan<br> 
+        R batch<br> 
+        19-07-2021<br> 
+    </p>
+    <p onclick="p()"> This is paragraph</p>
+    <img src="https://www.mylloyd.com/media/products/zoom1-min.jpg" onclick="im()" alt="Television" style="height: 250px;width:250px"><br>
+    <button onclick="bu()">This is button</button><br><br>
+    <a href="#" onclick="a()">This is link</a><br><br>
+    <button onclick="result()">SHOW RANK</button>
+    <script>
+        let pcount=0,imcount=0,bucount=0,acount=0;
+        function p()
+        {
+            pcount++;
+        }
+        function im()
+        {
+            imcount++;
+        }
+        function bu()
+        {
+            bucount++;
+        }
+        function a()
+        {
+            acount++;
+        }
+        function result()
+        {
+            alert("No of times it is clicked :"+pcount+" "+imcount+" "+bucount+" "+acount);
+            let arrcount=[pcount,imcount,bucount,acount];
+            let arrtag=["paragraph", "image", "button", "link"];
+            let max=arrcount[0];
+            let k=0;
+            for(let i=0;i<4;i++)
+            {
+                if(arrcount[i]>max)
+                {
+                    max=arrcount[i];
+                    k=i;
+                }
+            }
+            alert("("+arrtag[k]+","+max+")");
+        }
+    </script>
+</body>
+</html>
